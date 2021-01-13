@@ -1,0 +1,526 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>cora.util.units &mdash; cora 0+untagged.1.ge0949cb documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="cora.util.sphfunc" href="cora.util.sphfunc.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> cora
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0+untagged.1.ge0949cb
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../simulation.html">Simulating the Radio Sky</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../reference.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../reference.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cora.core.html">cora.core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cora.foreground.html">cora.foreground</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cora.scripts.html">cora.scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cora.signal.html">cora.signal</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="cora.util.html">cora.util</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cora.util.bilinearmap.html">cora.util.bilinearmap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cora.util.coord.html">cora.util.coord</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cora.util.cosmology.html">cora.util.cosmology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cora.util.cubicspline.html">cora.util.cubicspline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cora.util.fftutil.html">cora.util.fftutil</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cora.util.hputil.html">cora.util.hputil</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cora.util.nputil.html">cora.util.nputil</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cora.util.sphfunc.html">cora.util.sphfunc</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">cora.util.units</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">cora</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../reference.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="cora.util.html">cora.util</a> &raquo;</li>
+        
+      <li>cora.util.units</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/_autosummary/cora.util.units.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cora.util.units">
+<span id="cora-util-units"></span><h1>cora.util.units<a class="headerlink" href="#module-cora.util.units" title="Permalink to this headline">¶</a></h1>
+<p>A set of useful constants and conversions in Astronomy and Cosmology.</p>
+<p class="rubric">Module Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cora.util.units.solar_mass" title="cora.util.units.solar_mass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">solar_mass</span></code></a></p></td>
+<td><p>Solar masses in kg</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cora.util.units.nano" title="cora.util.units.nano"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nano</span></code></a></p></td>
+<td><p>Nano prefix</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cora.util.units.micro" title="cora.util.units.micro"><code class="xref py py-obj docutils literal notranslate"><span class="pre">micro</span></code></a></p></td>
+<td><p>Micro prefix</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cora.util.units.milli" title="cora.util.units.milli"><code class="xref py py-obj docutils literal notranslate"><span class="pre">milli</span></code></a></p></td>
+<td><p>Milli prefix</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cora.util.units.kilo" title="cora.util.units.kilo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kilo</span></code></a></p></td>
+<td><p>Kilo prefix</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cora.util.units.mega" title="cora.util.units.mega"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mega</span></code></a></p></td>
+<td><p>Mega prefix</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cora.util.units.giga" title="cora.util.units.giga"><code class="xref py py-obj docutils literal notranslate"><span class="pre">giga</span></code></a></p></td>
+<td><p>Giga prefix</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cora.util.units.parsec" title="cora.util.units.parsec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parsec</span></code></a></p></td>
+<td><p>Parsecs in m</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cora.util.units.kilo_parsec" title="cora.util.units.kilo_parsec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kilo_parsec</span></code></a></p></td>
+<td><p>Kilo Parsecs in m</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cora.util.units.mega_parsec" title="cora.util.units.mega_parsec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mega_parsec</span></code></a></p></td>
+<td><p>Mega Parsecs in m</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cora.util.units.giga_parsec" title="cora.util.units.giga_parsec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">giga_parsec</span></code></a></p></td>
+<td><p>Giga Parsecs in m</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cora.util.units.second" title="cora.util.units.second"><code class="xref py py-obj docutils literal notranslate"><span class="pre">second</span></code></a></p></td>
+<td><p>One second in seconds</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cora.util.units.minute" title="cora.util.units.minute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minute</span></code></a></p></td>
+<td><p>One minute in seconds</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cora.util.units.hour" title="cora.util.units.hour"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hour</span></code></a></p></td>
+<td><p>One hour in seconds</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cora.util.units.day" title="cora.util.units.day"><code class="xref py py-obj docutils literal notranslate"><span class="pre">day</span></code></a></p></td>
+<td><p>One day in seconds</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cora.util.units.year" title="cora.util.units.year"><code class="xref py py-obj docutils literal notranslate"><span class="pre">year</span></code></a></p></td>
+<td><p>One year in seconds</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cora.util.units.kilo_year" title="cora.util.units.kilo_year"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kilo_year</span></code></a></p></td>
+<td><p>One kilo year in seconds</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cora.util.units.mega_year" title="cora.util.units.mega_year"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mega_year</span></code></a></p></td>
+<td><p>One mega year in seconds</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cora.util.units.giga_year" title="cora.util.units.giga_year"><code class="xref py py-obj docutils literal notranslate"><span class="pre">giga_year</span></code></a></p></td>
+<td><p>One giga year in seconds</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cora.util.units.t_sidereal" title="cora.util.units.t_sidereal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">t_sidereal</span></code></a></p></td>
+<td><p>One sidereal day in seconds</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cora.util.units.G" title="cora.util.units.G"><code class="xref py py-obj docutils literal notranslate"><span class="pre">G</span></code></a></p></td>
+<td><p>Gravitational constant <span class="math notranslate nohighlight">\(G kg^-1 m^3 s^-2\)</span>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cora.util.units.G_n" title="cora.util.units.G_n"><code class="xref py py-obj docutils literal notranslate"><span class="pre">G_n</span></code></a></p></td>
+<td><p>Gravitational constant <span class="math notranslate nohighlight">\(G kg^-1 m^3 s^-2\)</span>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cora.util.units.c" title="cora.util.units.c"><code class="xref py py-obj docutils literal notranslate"><span class="pre">c</span></code></a></p></td>
+<td><p>Speed of light in m/s</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cora.util.units.c_sl" title="cora.util.units.c_sl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">c_sl</span></code></a></p></td>
+<td><p>Speed of light in m/s (In case of clashes.)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cora.util.units.stefan_boltzmann" title="cora.util.units.stefan_boltzmann"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stefan_boltzmann</span></code></a></p></td>
+<td><p>Stefan-Boltzmann (in W m^{-2} K^{-4})</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cora.util.units.a_rad" title="cora.util.units.a_rad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a_rad</span></code></a></p></td>
+<td><p>Radiation constant (in J m^{-3} K^{-4})</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cora.util.units.nu21" title="cora.util.units.nu21"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nu21</span></code></a></p></td>
+<td><p>21cm transition frequency (in MHz)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cora.util.units.k_B" title="cora.util.units.k_B"><code class="xref py py-obj docutils literal notranslate"><span class="pre">k_B</span></code></a></p></td>
+<td><p>Boltzmann constant</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cora.util.units.degree" title="cora.util.units.degree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">degree</span></code></a></p></td>
+<td><p>One degree in radians</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cora.util.units.arc_minute" title="cora.util.units.arc_minute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arc_minute</span></code></a></p></td>
+<td><p>One arc minute in radians</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cora.util.units.arc_second" title="cora.util.units.arc_second"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arc_second</span></code></a></p></td>
+<td><p>One arc second in radians</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt id="cora.util.units.solar_mass">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">solar_mass</code><em class="property"> = 1.98892e+30</em><a class="headerlink" href="#cora.util.units.solar_mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solar masses in kg</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.nano">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">nano</code><em class="property"> = 1e-09</em><a class="headerlink" href="#cora.util.units.nano" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nano prefix</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.micro">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">micro</code><em class="property"> = 1e-06</em><a class="headerlink" href="#cora.util.units.micro" title="Permalink to this definition">¶</a></dt>
+<dd><p>Micro prefix</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.milli">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">milli</code><em class="property"> = 0.001</em><a class="headerlink" href="#cora.util.units.milli" title="Permalink to this definition">¶</a></dt>
+<dd><p>Milli prefix</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.kilo">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">kilo</code><em class="property"> = 1000.0</em><a class="headerlink" href="#cora.util.units.kilo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kilo prefix</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.mega">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">mega</code><em class="property"> = 1000000.0</em><a class="headerlink" href="#cora.util.units.mega" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mega prefix</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.giga">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">giga</code><em class="property"> = 1000000000.0</em><a class="headerlink" href="#cora.util.units.giga" title="Permalink to this definition">¶</a></dt>
+<dd><p>Giga prefix</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.parsec">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">parsec</code><em class="property"> = 3.08568025e+16</em><a class="headerlink" href="#cora.util.units.parsec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parsecs in m</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.kilo_parsec">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">kilo_parsec</code><em class="property"> = 3.08568025e+19</em><a class="headerlink" href="#cora.util.units.kilo_parsec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kilo Parsecs in m</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.mega_parsec">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">mega_parsec</code><em class="property"> = 3.08568025e+22</em><a class="headerlink" href="#cora.util.units.mega_parsec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mega Parsecs in m</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.giga_parsec">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">giga_parsec</code><em class="property"> = 3.08568025e+25</em><a class="headerlink" href="#cora.util.units.giga_parsec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Giga Parsecs in m</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.second">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">second</code><em class="property"> = 1.0</em><a class="headerlink" href="#cora.util.units.second" title="Permalink to this definition">¶</a></dt>
+<dd><p>One second in seconds</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.minute">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">minute</code><em class="property"> = 60.0</em><a class="headerlink" href="#cora.util.units.minute" title="Permalink to this definition">¶</a></dt>
+<dd><p>One minute in seconds</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.hour">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">hour</code><em class="property"> = 3600.0</em><a class="headerlink" href="#cora.util.units.hour" title="Permalink to this definition">¶</a></dt>
+<dd><p>One hour in seconds</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.day">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">day</code><em class="property"> = 86400.0</em><a class="headerlink" href="#cora.util.units.day" title="Permalink to this definition">¶</a></dt>
+<dd><p>One day in seconds</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.year">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">year</code><em class="property"> = 31557600.0</em><a class="headerlink" href="#cora.util.units.year" title="Permalink to this definition">¶</a></dt>
+<dd><p>One year in seconds</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.kilo_year">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">kilo_year</code><em class="property"> = 31557600000.0</em><a class="headerlink" href="#cora.util.units.kilo_year" title="Permalink to this definition">¶</a></dt>
+<dd><p>One kilo year in seconds</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.mega_year">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">mega_year</code><em class="property"> = 31557600000000.0</em><a class="headerlink" href="#cora.util.units.mega_year" title="Permalink to this definition">¶</a></dt>
+<dd><p>One mega year in seconds</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.giga_year">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">giga_year</code><em class="property"> = 3.15576e+16</em><a class="headerlink" href="#cora.util.units.giga_year" title="Permalink to this definition">¶</a></dt>
+<dd><p>One giga year in seconds</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.t_sidereal">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">t_sidereal</code><em class="property"> = 86164.09056</em><a class="headerlink" href="#cora.util.units.t_sidereal" title="Permalink to this definition">¶</a></dt>
+<dd><p>One sidereal day in seconds</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.G">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">G</code><em class="property"> = 6.6742e-11</em><a class="headerlink" href="#cora.util.units.G" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gravitational constant <span class="math notranslate nohighlight">\(G kg^-1 m^3 s^-2\)</span>.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.G_n">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">G_n</code><em class="property"> = 6.6742e-11</em><a class="headerlink" href="#cora.util.units.G_n" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gravitational constant <span class="math notranslate nohighlight">\(G kg^-1 m^3 s^-2\)</span>. (In case of clashes)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.c">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">c</code><em class="property"> = 299792458.0</em><a class="headerlink" href="#cora.util.units.c" title="Permalink to this definition">¶</a></dt>
+<dd><p>Speed of light in m/s</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.c_sl">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">c_sl</code><em class="property"> = 299792458.0</em><a class="headerlink" href="#cora.util.units.c_sl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Speed of light in m/s (In case of clashes.)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.stefan_boltzmann">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">stefan_boltzmann</code><em class="property"> = 5.6705e-08</em><a class="headerlink" href="#cora.util.units.stefan_boltzmann" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stefan-Boltzmann (in W m^{-2} K^{-4})</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.a_rad">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">a_rad</code><em class="property"> = 7.565900807284485e-16</em><a class="headerlink" href="#cora.util.units.a_rad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Radiation constant (in J m^{-3} K^{-4})</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.nu21">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">nu21</code><em class="property"> = 1420.40575177</em><a class="headerlink" href="#cora.util.units.nu21" title="Permalink to this definition">¶</a></dt>
+<dd><p>21cm transition frequency (in MHz)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.k_B">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">k_B</code><em class="property"> = 1.3806503e-23</em><a class="headerlink" href="#cora.util.units.k_B" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boltzmann constant</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.degree">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">degree</code><em class="property"> = 0.017453292519943295</em><a class="headerlink" href="#cora.util.units.degree" title="Permalink to this definition">¶</a></dt>
+<dd><p>One degree in radians</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.arc_minute">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">arc_minute</code><em class="property"> = 0.0002908882086657216</em><a class="headerlink" href="#cora.util.units.arc_minute" title="Permalink to this definition">¶</a></dt>
+<dd><p>One arc minute in radians</p>
+</dd></dl>
+
+<dl class="py data">
+<dt id="cora.util.units.arc_second">
+<code class="sig-prename descclassname">cora.util.units.</code><code class="sig-name descname">arc_second</code><em class="property"> = 4.84813681109536e-06</em><a class="headerlink" href="#cora.util.units.arc_second" title="Permalink to this definition">¶</a></dt>
+<dd><p>One arc second in radians</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="cora.util.sphfunc.html" class="btn btn-neutral float-left" title="cora.util.sphfunc" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2013, J. Richard Shaw.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

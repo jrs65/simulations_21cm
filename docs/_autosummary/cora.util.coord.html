@@ -1,0 +1,418 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>cora.util.coord &mdash; cora 0+untagged.1.ge0949cb documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="cora.util.cosmology" href="cora.util.cosmology.html" />
+    <link rel="prev" title="cora.util.bilinearmap" href="cora.util.bilinearmap.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> cora
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0+untagged.1.ge0949cb
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../simulation.html">Simulating the Radio Sky</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../reference.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../reference.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cora.core.html">cora.core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cora.foreground.html">cora.foreground</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cora.scripts.html">cora.scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cora.signal.html">cora.signal</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="cora.util.html">cora.util</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cora.util.bilinearmap.html">cora.util.bilinearmap</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">cora.util.coord</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cora.util.cosmology.html">cora.util.cosmology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cora.util.cubicspline.html">cora.util.cubicspline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cora.util.fftutil.html">cora.util.fftutil</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cora.util.hputil.html">cora.util.hputil</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cora.util.nputil.html">cora.util.nputil</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cora.util.sphfunc.html">cora.util.sphfunc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cora.util.units.html">cora.util.units</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">cora</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../reference.html">API Reference</a> &raquo;</li>
+        
+          <li><a href="cora.util.html">cora.util</a> &raquo;</li>
+        
+      <li>cora.util.coord</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/_autosummary/cora.util.coord.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cora.util.coord">
+<span id="cora-util-coord"></span><h1>cora.util.coord<a class="headerlink" href="#module-cora.util.coord" title="Permalink to this headline">¶</a></h1>
+<p>Co-ordinate Utilities</p>
+<p>A module of useful functions when dealing with Spherical Polar
+co-ordinates.</p>
+<div class="section" id="transforms">
+<h2>Transforms<a class="headerlink" href="#transforms" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#cora.util.coord.sph_to_cart" title="cora.util.coord.sph_to_cart"><code class="xref py py-meth docutils literal notranslate"><span class="pre">sph_to_cart()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#cora.util.coord.cart_to_sph" title="cora.util.coord.cart_to_sph"><code class="xref py py-meth docutils literal notranslate"><span class="pre">cart_to_sph()</span></code></a></p></li>
+</ul>
+</div>
+<div class="section" id="vector-operations">
+<h2>Vector operations<a class="headerlink" href="#vector-operations" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#cora.util.coord.sph_dot" title="cora.util.coord.sph_dot"><code class="xref py py-meth docutils literal notranslate"><span class="pre">sph_dot()</span></code></a></p></li>
+</ul>
+</div>
+<div class="section" id="tangent-plane">
+<h2>Tangent Plane<a class="headerlink" href="#tangent-plane" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#cora.util.coord.thetaphi_plane" title="cora.util.coord.thetaphi_plane"><code class="xref py py-meth docutils literal notranslate"><span class="pre">thetaphi_plane()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#cora.util.coord.thetaphi_plane_cart" title="cora.util.coord.thetaphi_plane_cart"><code class="xref py py-meth docutils literal notranslate"><span class="pre">thetaphi_plane_cart()</span></code></a></p></li>
+</ul>
+</div>
+<div class="section" id="miscellaneous">
+<h2>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#cora.util.coord.great_circle_points" title="cora.util.coord.great_circle_points"><code class="xref py py-meth docutils literal notranslate"><span class="pre">great_circle_points()</span></code></a></p></li>
+</ul>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cora.util.coord.cart_to_sph" title="cora.util.coord.cart_to_sph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cart_to_sph</span></code></a>(cart_arr)</p></td>
+<td><p>Convert a cartesian vector into Spherical Polars.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cora.util.coord.great_circle_points" title="cora.util.coord.great_circle_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">great_circle_points</span></code></a>(sph1, sph2, npoints)</p></td>
+<td><p>Return the intermediate points on the great circle between points <cite>sph1</cite> and <cite>sph2</cite>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">groundsph_to_cart</span></code>(gsph, zenith)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cora.util.coord.sph_dot" title="cora.util.coord.sph_dot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sph_dot</span></code></a>(arr1, arr2)</p></td>
+<td><p>Take the scalar product in spherical polars.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cora.util.coord.sph_to_cart" title="cora.util.coord.sph_to_cart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sph_to_cart</span></code></a>(sph_arr)</p></td>
+<td><p>Convert a vector in Spherical Polar coordinates to Cartesians.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#cora.util.coord.thetaphi_plane" title="cora.util.coord.thetaphi_plane"><code class="xref py py-obj docutils literal notranslate"><span class="pre">thetaphi_plane</span></code></a>(sph_arr)</p></td>
+<td><p>For each position, return the theta, phi unit vectors (in spherical polars).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cora.util.coord.thetaphi_plane_cart" title="cora.util.coord.thetaphi_plane_cart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">thetaphi_plane_cart</span></code></a>(sph_arr)</p></td>
+<td><p>For each position, return the theta, phi unit vectors (in cartesians).</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt id="cora.util.coord.sph_to_cart">
+<code class="sig-prename descclassname">cora.util.coord.</code><code class="sig-name descname">sph_to_cart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sph_arr</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cora.util.coord.sph_to_cart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a vector in Spherical Polar coordinates to Cartesians.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sph_arr</strong> (<em>np.ndarry</em>) – A vector (or array of) in spherical polar co-ordinates. Values should be
+packed as [r, theta, phi] along the last axis. Alternatively they can be
+packed as [theta, phi] in which case r is assumed to be one.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>cart_arr</strong> – Array of equivalent vectors in cartesian coordinartes.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarry</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cora.util.coord.cart_to_sph">
+<code class="sig-prename descclassname">cora.util.coord.</code><code class="sig-name descname">cart_to_sph</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cart_arr</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cora.util.coord.cart_to_sph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a cartesian vector into Spherical Polars.</p>
+<p>Uses the same convention as <cite>sph_to_cart</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cart_arr</strong> (<em>np.ndarray</em>) – Array of cartesians.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>sph_arr</strong> – Array of spherical polars (packed as [[ r1, theta1, phi1], [r2, theta2,
+phi2], …]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cora.util.coord.sph_dot">
+<code class="sig-prename descclassname">cora.util.coord.</code><code class="sig-name descname">sph_dot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arr1</span></em>, <em class="sig-param"><span class="n">arr2</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cora.util.coord.sph_dot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take the scalar product in spherical polars.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arr1</strong> (<em>np.ndarray</em>) – Two arrays of vectors in spherical polars [theta, phi], (or
+alternatively as [theta, phi]). Should be broadcastable against each
+other.</p></li>
+<li><p><strong>arr2</strong> (<em>np.ndarray</em>) – Two arrays of vectors in spherical polars [theta, phi], (or
+alternatively as [theta, phi]). Should be broadcastable against each
+other.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>dot</strong> – An array of the dotted vectors.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cora.util.coord.thetaphi_plane">
+<code class="sig-prename descclassname">cora.util.coord.</code><code class="sig-name descname">thetaphi_plane</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sph_arr</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cora.util.coord.thetaphi_plane" title="Permalink to this definition">¶</a></dt>
+<dd><p>For each position, return the theta, phi unit vectors (in spherical
+polars).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sph_arr</strong> (<em>np.ndarray</em>) – Angular positions (in spherical polar co-ordinates).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>thetahat, phihat</strong> – Unit vectors in the theta and phi directions (still in spherical
+polars).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cora.util.coord.thetaphi_plane_cart">
+<code class="sig-prename descclassname">cora.util.coord.</code><code class="sig-name descname">thetaphi_plane_cart</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sph_arr</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cora.util.coord.thetaphi_plane_cart" title="Permalink to this definition">¶</a></dt>
+<dd><p>For each position, return the theta, phi unit vectors (in cartesians).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sph_arr</strong> (<em>np.ndarray</em>) – Angular positions (in spherical polar co-ordinates).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>thetahat, phihat</strong> – Unit vectors in the theta and phi directions (in cartesian coordinates).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cora.util.coord.great_circle_points">
+<code class="sig-prename descclassname">cora.util.coord.</code><code class="sig-name descname">great_circle_points</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sph1</span></em>, <em class="sig-param"><span class="n">sph2</span></em>, <em class="sig-param"><span class="n">npoints</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cora.util.coord.great_circle_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the intermediate points on the great circle between points <cite>sph1</cite>
+and <cite>sph2</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sph1</strong> (<em>np.ndarray</em>) – Points on sphere, packed as [theta, phi]</p></li>
+<li><p><strong>sph2</strong> (<em>np.ndarray</em>) – Points on sphere, packed as [theta, phi]</p></li>
+<li><p><strong>npoints</strong> (<em>integer</em>) – Number of intermediate points</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>intpoints</strong> – Intermediate points, packed as [ [theta1, phi1], [theta2, phi2], …]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="cora.util.cosmology.html" class="btn btn-neutral float-right" title="cora.util.cosmology" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cora.util.bilinearmap.html" class="btn btn-neutral float-left" title="cora.util.bilinearmap" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2013, J. Richard Shaw.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
